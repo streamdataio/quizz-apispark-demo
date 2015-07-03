@@ -2,7 +2,7 @@
 
 (function () {
 
-  function QuizzAppController($scope, $interval, $timeout, $mdToast, questionService, voteService) {
+  function QuizzAppController($scope, $interval, $timeout, $location, $mdToast, questionService, voteService) {
     var vm = this;
     vm.simulateOthers = false;
 
@@ -68,7 +68,13 @@
 
     vm.onChange = function(doSimulate) {
       if (doSimulate) {
-        $scope.$emit('question-page', { currentQuestion: questions[0] });
+        if ($location.path() == '/questions') {
+          $scope.$emit('question-page', { currentQuestion: questions[0] });
+
+        } else if ($location.path() == '/results') {
+          $scope.$emit('result-page', { });
+
+        }
 
         $mdToast.show(
           $mdToast.simple()
@@ -102,7 +108,7 @@
 
   angular
     .module('QuizzApp')
-    .controller('QuizzAppController', ['$scope', '$interval', '$timeout', '$mdToast',
+    .controller('QuizzAppController', ['$scope', '$interval', '$timeout', '$location','$mdToast',
       'questionService', 'voteService', QuizzAppController]);
 
 })();

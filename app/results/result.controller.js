@@ -63,7 +63,7 @@
     });
 
     vm.goToQuizzStart = function() {
-      $location.path("/question");
+      $location.path("/questions");
 
     };
 

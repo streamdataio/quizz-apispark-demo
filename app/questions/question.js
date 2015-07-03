@@ -4,7 +4,7 @@
     angular
         .module('QuizzApp')
         .config(['$routeProvider', function($routeProvider) {
-          $routeProvider.when('/question', {
+          $routeProvider.when('/questions', {
             templateUrl: 'app/questions/question.html',
             controller: 'QuestionController',
             controllerAs: 'questionCtrl'
