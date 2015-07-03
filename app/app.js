@@ -16,7 +16,7 @@
         })
         .config(['$routeProvider', function($routeProvider) {
           $routeProvider.otherwise({
-            redirectTo: '/question'
+            redirectTo: '/questions'
           });
         }]);
 })();
