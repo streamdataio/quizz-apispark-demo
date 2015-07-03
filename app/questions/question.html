@@ -1,0 +1,18 @@
+<h2 class="title">{{::questionCtrl.currentQuestion.question}}</h2>
+<div class="questions-container">
+    <div class="question-list">
+        <md-button ng-repeat="choice in questionCtrl.currentQuestion.choices" class="md-raised md-primary"
+                   ng-click="questionCtrl.vote(choice.id)">{{::choice.label}}</md-button>
+    </div>
+    <h3 class="chart-title">Votes</h3>
+    <div class="question-chart">
+        <bars-chart data="questionCtrl.chartData"
+                        margin="{top: 15, right: 15, bottom: 15, left: 15}"
+                        bar-width="200" height="300" bar-padding="2" height-growth-margin="50"></bars-chart>
+    </div>
+</div>
+<div class="button-bar question" ng-cloak>
+    <md-button class="md-raised" ng-click="questionCtrl.goToPrev()"
+               ng-disabled="questionCtrl.currentQuestion.id < 2">Previous question</md-button>
+    <md-button class="md-raised" ng-click="questionCtrl.goToNext()">{{questionCtrl.isQuizzEnded() ? 'Quizz' : 'Next question'}}</md-button>
+</div>

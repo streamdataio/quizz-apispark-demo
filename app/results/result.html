@@ -1,0 +1,20 @@
+<div class="button-bar">
+    <h2>Results</h2>
+    <md-switch md-no-ink aria-label="Show the answers" ng-model="resultCtrl.showAnswers">
+        Show the answers
+    </md-switch>
+</div>
+<div class="results-container">
+    <md-progress-circular class="md-accent" md-mode="indeterminate" ng-show="resultCtrl.loading"></md-progress-circular>
+    <md-card class="result-chart" ng-repeat="(key, result) in resultCtrl.results">
+        <h2 class="title">{{::result.question}}</h2>
+        <bars-chart id="result.id" data="result.choices" margin="{top: 15, right: 15, bottom: 150, left: 15}"
+                        bar-width="100" height="300"
+                        bar-padding="20" height-growth-margin="10"></bars-chart>
+        <h4 class="answer" ng-show="resultCtrl.showAnswers">The right answer is: {{result.answer}}</h4>
+    </md-card>
+</div>
+
+<div class="button-bar result">
+    <md-button class="md-raised" ng-click="resultCtrl.goToQuizzStart()">Restart the quizz</md-button>
+</div>

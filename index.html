@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="QuizzApp">
+<head>
+    <title>Quizz</title>
+
+    <link rel="stylesheet" href="assets/css/application.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+
+    <meta name="msapplication-TileColor" content="#c44240">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body data-no-turbolink>
+
+<div id="wrapper" ng-controller="QuizzAppController as quizzAppCtrl">
+    <header>
+        <h1 class="header-title">Restlet Quizz!</h1>
+        <md-switch class="simulate-players" md-no-ink aria-label="Simulate players"
+                   ng-model="quizzAppCtrl.simulateOthers"
+                   ng-change="quizzAppCtrl.onChange(quizzAppCtrl.simulateOthers)">
+            Simulate players
+    </md-switch>
+    </header>
+    <div id="content" >
+        <div ng-view=""></div>
+    </div>
+    <footer>
+        <img class="logo streamdata" src="assets/img/streamdata_logo.png"/>
+        <img class="logo apispark" src="assets/img/apispark_logo.png"/>
+    </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-sanitize.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+
+<script src="vendor/assets/js/color.js"></script>
+<script src="vendor/assets/js/d3.js"></script>
+<script src="vendor/assets/js/nanobar.js"></script>
+<script src="vendor/assets/js/tinycolor.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fast-json-patch/0.5.2/json-patch-duplex.min.js"></script>
+<script src="vendor/assets/js/streamdataio.min.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/app.controller.js"></script>
+<script src="app/app.service.js"></script>
+<script src="app/charts/chart.directive.js"></script>
+<script src="app/questions/question.js"></script>
+<script src="app/questions/question.controller.js"></script>
+<script src="app/questions/question.service.js"></script>
+<script src="app/results/result.js"></script>
+<script src="app/results/result.controller.js"></script>
+<script src="app/results/result.service.js"></script>
+<script src="app/votes/vote.service.js"></script>
+
+</body>
+</html>

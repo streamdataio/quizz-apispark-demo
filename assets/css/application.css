@@ -1,0 +1,358 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+
+header {
+  padding:10px;
+}
+
+#content {
+  padding-bottom:200px; /* Height of the footer element */
+}
+
+footer {
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  height: 200px;
+  display: -webkit-box;
+  display: -moz-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+}
+
+footer,
+header {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6b6b8e+0,3a3854+100 */
+    background: #6b6b8e; /* Old browsers */
+    background: -moz-linear-gradient(left,  #6b6b8e 0%, #3a3854 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#6b6b8e), color-stop(100%,#3a3854)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #6b6b8e 0%,#3a3854 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #6b6b8e 0%,#3a3854 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #6b6b8e 0%,#3a3854 100%); /* IE10+ */
+    background: linear-gradient(to right,  #6b6b8e 0%,#3a3854 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6b8e', endColorstr='#3a3854',GradientType=1 ); /* IE6-9 */
+}
+
+header {
+  height: 100px;
+  display: -webkit-box;
+  display: -moz-flexbox;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+header > h1 {
+  line-height: 50px;
+  color: #fff;
+  width: 90%;
+  text-align: center;
+}
+
+footer {
+}
+
+footer > .logo {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+}
+
+footer > .logo.streamdata {
+    height: 60%;
+}
+
+footer > .logo.apispark {
+    height: 50%;
+}
+
+h2 {
+    margin: 0px;
+    padding: 10px;
+}
+
+.debug {
+  border: solid red;
+}
+
+.title {
+  text-align: center;
+}
+
+.chart-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  flex: 1;
+}
+
+.x-axis {
+  font: 14px sans-serif;
+}
+
+.x-axis path,
+.x-axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+  shape-rendering: crispEdges;
+}
+
+.questions-container {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  height: 380px;
+}
+
+.question-chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex: 33;
+  -moz-flex: 33;
+  -ms-flex: 33;
+  flex: 33;
+
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+
+  -webkit-flex-flow: column wrap;
+  -moz-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+
+  margin: 10px;
+}
+
+.question-list {
+  -webkit-flex: 66;
+  -moz-flex: 66;
+  -ms-flex: 66;
+  flex: 66;
+
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+
+  -webkit-align-content: space-around;
+  -moz-align-content: space-around;
+  -ms-align-content: space-around;
+  align-content: space-around;
+
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  height: 380px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.question-list > button {
+    width: 470px;
+}
+
+.question-list > button > span {
+  width: 100%;
+  display: block;
+  line-height: 20px;
+  white-space: normal;
+}
+
+.choices-container {
+  height: 100%;
+}
+
+.results-container {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+
+  margin: 15px;
+}
+
+.result-chart {
+  -webkit-flex: 1 33%;
+  -moz-flex: 1 33%;
+  -ms-flex: 1 33%;
+  flex: 1 33%;
+
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: flex;
+
+  -webkit-flex-flow: column wrap;
+  -moz-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+
+  margin: 10px;
+  padding: 10px;
+}
+
+.button-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: flex;
+
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+
+  margin: 35px;
+}
+
+.answer {
+  color: #239023;
+}
+
+.simulate-players {
+  color: #ffffff;
+}
+
+md-toast {
+  font-weight: bold;
+  background-color: #74c476;
+  min-height: 38px!important;
+}
+
+md-switch.md-checked .md-bar {
+  background-color: rgba(116, 196, 118, 0.5);
+}
+
+md-switch.md-checked .md-thumb {
+  background-color: #74c476;
+}
+
+@media (max-width: 768px) {
+
+  #content {
+    padding-bottom:100px;
+  }
+
+  .questions-container {
+    -webkit-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .results-container {
+    -webkit-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .button-bar {
+    -webkit-flex-flow: column;
+    -moz-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .button-bar.question {
+    padding-top: 200px;
+  }
+
+  .chart-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .question-list > button {
+    width: 100%;
+  }
+
+  footer {
+    height: 100px;
+  }
+}
