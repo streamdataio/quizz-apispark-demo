@@ -1,11 +1,11 @@
 # Quizz APISpark - Streamdata.io demo
 
 This demo shows how to turn an APISpark API into a streaming API thanks to [streamdata.io](http://streamdata.io/). For 
-further reading, you can read the blog entry explanation at [restlet](http://restlet.com/blog/2015/07/08/create-a-quiz-application-with-google-sheets-apispark-streamdata-io-and-d3-js/).
+further reading, you can read the blog entry explanation at [restlet blog](http://restlet.com/blog/2015/07/08/create-a-quiz-application-with-google-sheets-apispark-streamdata-io-and-d3-js/) or[streamdata blog](http://streamdata.io/blog/quiz-applicati…eamdataio-d3js).
 
 ## Steps
 
-1. Create a Google Sheet with your Quizz questions and answers as described at [TODO add the url]
+1. Create a Google Sheet with your Quizz questions and answers as described in the blog posts
 2. Create an APISpark account at http://restlet.com/products/apispark/ to expose the Web API of the Quizz as described at [TODO add the url]
 3. Create a streamdata.io account to get your streamdata.io app token at https://portal.streamdata.io/ in order to turn
 the Vote API into a streaming API
