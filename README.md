@@ -1,7 +1,7 @@
 # Quizz APISpark - Streamdata.io demo
 
 This demo shows how to turn an APISpark API into a streaming API thanks to [streamdata.io](http://streamdata.io/). For 
-further reading, you can read the blog entry explanation at [restlet blog](http://restlet.com/blog/2015/07/08/create-a-quiz-application-with-google-sheets-apispark-streamdata-io-and-d3-js/) or[streamdata blog](http://streamdata.io/blog/quiz-applicati…eamdataio-d3js).
+further reading, you can read the blog entry explanation at [restlet blog](http://restlet.com/blog/2015/07/08/create-a-quiz-application-with-google-sheets-apispark-streamdata-io-and-d3-js/) or [streamdata blog](http://streamdata.io/blog/quiz-applicati…eamdataio-d3js).
 
 ## Steps
 
